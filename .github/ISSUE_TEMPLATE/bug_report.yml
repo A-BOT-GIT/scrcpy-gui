@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in scrcpy-gui
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include device serials, private IP addresses, or credentials.
+  - type: input
+    id: version
+    attributes:
+      label: scrcpy-gui version
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: input
+    id: scrcpy-version
+    attributes:
+      label: scrcpy version
+      placeholder: v4.1
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      render: text

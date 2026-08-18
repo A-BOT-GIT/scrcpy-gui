@@ -1,0 +1,23 @@
+[project]
+name = "scrcpy-gui"
+version = "0.1.0"
+description = "An unofficial Windows GUI launcher for scrcpy"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+  "PyQt6>=6.6,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "PyInstaller>=6.20,<7",
+  "pytest>=8,<10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools]
+py-modules = []
