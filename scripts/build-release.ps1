@@ -14,7 +14,6 @@ $archivePath = Join-Path $buildRoot "scrcpy-gui-v$Version-windows-x64.zip"
 
 if (-not $SkipDownload) {
     & (Join-Path $PSScriptRoot "setup-scrcpy.ps1")
-    if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 }
 if (-not (Test-Path (Join-Path $vendorRoot "scrcpy.exe"))) {
     throw "scrcpy is not installed. Run scripts/setup-scrcpy.ps1 first."

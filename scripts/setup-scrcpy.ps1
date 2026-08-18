@@ -18,7 +18,7 @@ if ((Test-Path (Join-Path $destinationPath "scrcpy.exe")) -and
     (Test-Path (Join-Path $destinationPath "adb.exe")) -and
     -not $Force) {
     Write-Host "scrcpy is already installed at $destinationPath"
-    exit 0
+    return
 }
 
 $scratch = Join-Path ([IO.Path]::GetTempPath()) ("scrcpy-gui-" + [guid]::NewGuid().ToString("N"))
